@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     <title>Editing Site</title>
     <style>
         
@@ -49,7 +50,7 @@
             margin-left: 2vw;
         }
 
-        @media only screen and (max-width: 400px) {
+        @media only screen and (max-width: 500px) {
             .output{
                 width: 90vw;
                 margin-top: 25px;
@@ -70,7 +71,7 @@
         input {
             border: none;
             height: 2em;
-
+           
         }
 
         textarea {
@@ -157,6 +158,12 @@
                             <option>
                                 'Yesteryear', cursive;
                             </option>
+                            <option>Verdana,sans-serif;
+                            </option>
+                            <option>
+                                fantasy
+                            </option>
+                            
                         </select>
                     </td>
                 </tr>
@@ -208,7 +215,7 @@
             <span class="editor">
 
                 <h1 style="color:{{hcol}}">{{heading}}</h1>
-                <p style="color:{{pcol}};">
+                <p style="color:{{pcol}};padding: auto;">
                     {{text}} <br>
                 </p>
 
