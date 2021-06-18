@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Charmonman&family=Dancing+Script&family=Handlee&family=Parisienne&family=Sofia&family=Tangerine:wght@700&family=Yesteryear&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Editing Site</title>
+    <style>
+        body {
+            background-image: url("photo-1514454529242-9e4677563e7b.jfif");
+            background-repeat: repeat-y;
+            background-size: cover;
+
+        }
+
+        .input {
+            text-shadow: 1px 1px 2px rgb(135, 187, 255);
+            font-size: 1.1em;
+        }
+
+        .container {
+            text-align: center;
+            padding: auto;
+            display: flex;
+            flex-wrap: wrap;
+            height: 80vh;
+
+
+        }
+
+        .output {
+            min-width: 60vw;
+            max-width: 90vw;
+            margin-left: 2vw;
+
+
+        }
+
+        #text {
+            height: 30vh;
+            flex-wrap: wrap;
+        }
+
+        table {
+            display: block;
+            position: relative;
+
+        }
+
+        input {
+            border: none;
+            height: 20px;
+        }
+
+        textarea {
+            border: none;
+            width: 15em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1
+        style="text-align:center;font-family:Georgia, 'Times New Roman', Times, serif;font-size:50PX;text-shadow: 3PX 3PX 2PX rgb(51, 153, 221);">
+        Lets Write and Style <span class="material-icons md-48">edit</span>
+    </h1>
+    <div ng-app="" class="container"
+        ng-init="bord=solid ;colbord=black ;pxbord=1px ;text=  ;bgcolor=white ;font=  ;fsize= ;heading= ;hcol= ;pcol=">
+
+        <div class="input">
+            <table>
+                <tr>
+                    <td>
+                        <label for="border">How do you want your border to be:</label>
+
+                    </td>
+                    <td>
+                        <select id="border" ng-model="bord">
+                            <option>double</option>
+                            <option>solid</option>
+                            <option>dotted</option>
+                        </select>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        <label for="pxbord">Border Weight(in px):</label>
+                    </td>
+                    <td>
+
+                        <input ng-model="pxbord"><br>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <label for="heading">Heading:</label>
+                    </td>
+                    <td>
+                        <input id="heading" ng-model="heading">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="text">
+                            Write Your Text Here:
+                        </label>
+                    </td>
+                    <td>
+
+                        <textarea id="text" ng-model="text"></textarea><br>
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td>
+                        <label for="font">Font Used:</label>
+                    </td>
+                    <td>
+                        <select id="font" ng-model="font">
+                            <option>
+                                'Parisienne', cursive;
+                            </option>
+                            <option>
+                                'Dancing Script', cursive;
+                            </option>
+                            <option>
+                                'Handlee', cursive;
+                            </option>
+                            <option>
+                                'Tangerine', cursive;
+
+                            </option>
+                            <option>
+                                'Yesteryear', cursive;
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="fontsize">
+                            Font Size:
+                        </label>
+                    </td>
+                    <td>
+                        <input id="fontsize" ng_model="fsize">
+
+                    </td>
+                </tr>
+                <tr>
+
+
+
+                    <td>
+                        <label for="colbord">
+                            Color of border:
+                        </label>
+
+                        <input id="colbord" type="color" ng-model="colbord">&nbsp
+                    </td>
+                    <td>
+                        <label for="bgcolor">Background Color:</label>
+                        <input id="bgcolor" type="color" ng-model="bgcolor">
+                    </td>
+
+                </tr>
+                <tr>
+
+
+
+                    <td>
+                        <label for="hcol">
+                            Color of Heading
+                        </label>
+
+                        <input id="hcol" type="color" ng-model="hcol">&nbsp
+                    </td>
+                    <td>
+                        <label for="pcolr">Paragraph's Color</label>
+                        <input id="pcol" type="color" ng-model="pcol">
+                    </td>
+
+                </tr>
+            </table>
+
+        </div>
+        <div class="output"
+            style="border:{{pxbord}}px {{bord}} {{colbord}}; background-color:{{bgcolor}}; font-family:{{font}};font-size:{{fsize}}px ">
+            <span class="editor">
+
+                <h1 style="color:{{hcol}}">{{heading}}</h1>
+                <p style="color:{{pcol}};">
+                    {{text}}<br>
+                </p>
+
+            </span>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+
+</html>
