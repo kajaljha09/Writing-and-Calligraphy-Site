@@ -14,16 +14,24 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Editing Site</title>
     <style>
-        body {
-            background-image: url("photo-1514454529242-9e4677563e7b.jfif");
-            background-repeat: repeat-y;
-            background-size: cover;
+        
+        body{
 
+            background-image:url("photo-1514454529242-9e4677563e7b.jfif");
+            background-repeat:repeat-y;
+            background-size: cover;
+           }
+           
         }
 
         .input {
             text-shadow: 1px 1px 2px rgb(135, 187, 255);
             font-size: 1.1em;
+            
+        }
+        label{
+            font-weight: bolder;
+
         }
 
         .container {
@@ -41,7 +49,7 @@
             margin-left: 2vw;
         }
 
-        @media only screen and (max-width: 300px) {
+        @media only screen and (max-width: 400px) {
             .output{
                 width: 90vw;
             }
@@ -73,8 +81,8 @@
 
 <body>
     <h1
-        style="text-align:center;font-family:Georgia, 'Times New Roman', Times, serif;font-size:50PX;text-shadow: 3PX 3PX 2PX rgb(51, 153, 221);">
-        Lets Write and Style It <span class="material-icons md-48">edit</span>
+        style="text-align:center;font-family:Georgia, 'Times New Roman', Times, serif;font-size:50PX;text-shadow: 3PX 3PX 5PX rgb(15, 113, 158);color:rgb(255, 255, 255)">
+        Writing And Calligraphy <span class="material-icons md-48">edit</span>
     </h1>
     <div ng-app="" class="container"
         ng-init="bord=solid ;colbord=black ;pxbord=1px ;text=  ;bgcolor=white ;font=  ;fsize= ;heading= ;hcol= ;pcol=">
@@ -194,9 +202,7 @@
             </table>
 
         </div>
-
-
-        <div class="output"
+       <div class="output"
             style="border:{{pxbord}}px {{bord}} {{colbord}}; background-color: {{bgcolor}}; font-family: {{font}};font-size: {{fsize}}px ">
             <span class="editor">
 
