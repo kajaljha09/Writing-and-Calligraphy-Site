@@ -83,7 +83,7 @@
 
                     </td>
                     <td>
-                        <select id="border" ng-model="bord">
+                        <select id="border" ng-model="bord" style="width: 10em;">
                             <option>double</option>
                             <option>solid</option>
                             <option>dotted</option>
@@ -94,7 +94,7 @@
                 <tr>
                     <td>
 
-                        <label for="pxbord">Border Weight(in px):</label>
+                        <label for="pxbord">Border Weight:</label>
                     </td>
                     <td>
 
@@ -178,6 +178,14 @@
 
                 </tr>
                 <tr>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
 
 
 
@@ -197,6 +205,8 @@
             </table>
 
         </div>
+
+
         <div class="output"
             style="border:{{pxbord}}px {{bord}} {{colbord}}; background-color: {{bgcolor}}; font-family: {{font}};font-size: {{fsize}}px ">
             <span class="editor">
