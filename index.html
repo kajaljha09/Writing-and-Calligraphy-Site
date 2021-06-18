@@ -37,11 +37,14 @@
         }
 
         .output {
-            min-width: 60vw;
-            max-width: 90vw;
+            width: 60vw;
             margin-left: 2vw;
+        }
 
-
+        @media only screen and (max-width: 300px) {
+            .output{
+                width: 90vw;
+            }
         }
 
         #text {
@@ -123,9 +126,6 @@
                         <textarea id="text" ng-model="text" placeholder="write down your text here"></textarea><br>
                     </td>
                 </tr>
-
-
-
                 <tr>
                     <td>
                         <label for="font">Font Used:</label>
@@ -163,9 +163,6 @@
                     </td>
                 </tr>
                 <tr>
-
-
-
                     <td>
                         <label for="colbord">
                             Color of border:
@@ -179,18 +176,8 @@
                     </td>
 
                 </tr>
+
                 <tr>
-                    <td>
-
-                    </td>
-                    <td>
-
-                    </td>
-                </tr>
-                <tr>
-
-
-
                     <td>
                         <label for="hcol">
                             Color of Heading
@@ -215,7 +202,7 @@
 
                 <h1 style="color:{{hcol}}">{{heading}}</h1>
                 <p style="color:{{pcol}};">
-                    {{text}}<br>
+                    {{text}} <br>
                 </p>
 
             </span>
